@@ -1,0 +1,21 @@
+product_id,product_name,category,sub_category,brand,standard_cost
+1,Laptop Pro 15,Electronics,Laptops,TechBrand,950
+2,Laptop Air 13,Electronics,Laptops,TechBrand,700
+3,Wireless Headphones X1,Electronics,Audio,SoundCo,160
+4,4K Monitor 27,Electronics,Displays,ViewMax,450
+5,Mechanical Keyboard,Electronics,Peripherals,TypePro,90
+6,Office Chair Ergon,Home & Office,Furniture,ComfortPlus,320
+7,Standing Desk Pro,Home & Office,Furniture,ComfortPlus,580
+8,LED Desk Lamp,Home & Office,Lighting,BrightCo,38
+9,Men Casual Shirt,Apparel,Menswear,StyleHub,45
+10,Women Formal Blazer,Apparel,Womenswear,StyleHub,110
+11,Running Shoes X,Apparel,Footwear,StepUp,130
+12,Backpack Pro 30L,Apparel,Accessories,CarryOn,75
+13,CRM Software Lite,Software,SaaS,BizSuite,299
+14,Analytics Dashboard,Software,SaaS,BizSuite,449
+15,Cloud Storage 1TB,Software,Cloud,CloudStore,149
+16,Printer LaserJet,Electronics,Printing,PrintPro,280
+17,Webcam HD 1080p,Electronics,Peripherals,ViewMax,85
+18,Noise Cancel Earbuds,Electronics,Audio,SoundCo,120
+19,Yoga Mat Premium,Home & Office,Fitness,ActiveLife,55
+20,Coffee Maker Pro,Home & Office,Kitchen,BrewMaster,199

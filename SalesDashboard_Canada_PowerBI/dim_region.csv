@@ -1,0 +1,11 @@
+region_id,city,province,country,zone
+1,Toronto,Ontario,Canada,Central
+2,Montreal,Quebec,Canada,East
+3,Vancouver,British Columbia,Canada,West
+4,Calgary,Alberta,Canada,Prairies
+5,Edmonton,Alberta,Canada,Prairies
+6,Ottawa,Ontario,Canada,Central
+7,Winnipeg,Manitoba,Canada,Prairies
+8,Halifax,Nova Scotia,Canada,Atlantic
+9,Quebec City,Quebec,Canada,East
+10,Mississauga,Ontario,Canada,Central

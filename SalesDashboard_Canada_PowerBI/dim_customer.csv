@@ -1,0 +1,31 @@
+customer_id,customer_name,segment,industry,ltv_tier,country
+1,Shopify Inc,SMB,Retail,Platinum,Canada
+2,BCE Inc,SMB,Healthcare,Gold,Canada
+3,Rogers Communications,Enterprise,Technology,Platinum,Canada
+4,TD Bank Group,SMB,Education,Platinum,Canada
+5,RBC Financial,SMB,Manufacturing,Platinum,Canada
+6,Loblaw Companies,Enterprise,Retail,Gold,Canada
+7,George Weston Ltd,Enterprise,Finance,Platinum,Canada
+8,Manulife Financial,SMB,Technology,Bronze,Canada
+9,Sun Life Financial,Enterprise,Manufacturing,Silver,Canada
+10,Brookfield Asset Mgmt,Enterprise,Technology,Bronze,Canada
+11,Canadian Tire Corp,Mid-Market,Healthcare,Gold,Canada
+12,Empire Company,Enterprise,Healthcare,Platinum,Canada
+13,Couche-Tard,Enterprise,Manufacturing,Platinum,Canada
+14,Power Corporation,Mid-Market,Healthcare,Silver,Canada
+15,Great-West Lifeco,Enterprise,Education,Bronze,Canada
+16,Thomson Reuters,SMB,Retail,Bronze,Canada
+17,Waste Connections,Enterprise,Finance,Silver,Canada
+18,Agnico Eagle Mines,SMB,Finance,Silver,Canada
+19,Barrick Gold,SMB,Technology,Platinum,Canada
+20,Nutrien Ltd,Enterprise,Education,Gold,Canada
+21,Air Canada,Mid-Market,Retail,Gold,Canada
+22,WestJet Airlines,Enterprise,Manufacturing,Silver,Canada
+23,Bombardier Inc,Mid-Market,Education,Silver,Canada
+24,CAE Inc,Enterprise,Healthcare,Silver,Canada
+25,SNC-Lavalin,Enterprise,Education,Silver,Canada
+26,Saputo Inc,SMB,Education,Platinum,Canada
+27,Gildan Activewear,SMB,Education,Gold,Canada
+28,Open Text Corp,SMB,Education,Gold,Canada
+29,CGI Group,Enterprise,Manufacturing,Bronze,Canada
+30,Magna International,Mid-Market,Education,Gold,Canada

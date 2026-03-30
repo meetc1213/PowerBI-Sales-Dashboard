@@ -1,0 +1,137 @@
+// ============================================================
+// SALES DASHBOARD — DAX MEASURES (Canadian context, CAD $)
+// Paste each measure into Power BI via Modeling > New Measure
+// ============================================================
+
+
+// ── REVENUE MEASURES ─────────────────────────────────────────
+
+Total Revenue =
+SUM(fact_sales[revenue])
+
+Revenue LY =
+CALCULATE([Total Revenue], SAMEPERIODLASTYEAR(dim_date[date_key]))
+
+Revenue YoY % =
+DIVIDE([Total Revenue] - [Revenue LY], [Revenue LY], 0)
+
+Revenue YTD =
+TOTALYTD([Total Revenue], dim_date[date_key])
+
+Revenue LYTD =
+CALCULATE(
+    TOTALYTD([Total Revenue], dim_date[date_key]),
+    SAMEPERIODLASTYEAR(dim_date[date_key])
+)
+
+Revenue MTD =
+TOTALMTD([Total Revenue], dim_date[date_key])
+
+Revenue QTD =
+TOTALQTD([Total Revenue], dim_date[date_key])
+
+
+// ── PROFITABILITY MEASURES ────────────────────────────────────
+
+Total Cost =
+SUM(fact_sales[cost])
+
+Gross Profit =
+SUM(fact_sales[gross_profit])
+
+Gross Margin % =
+DIVIDE([Gross Profit], [Total Revenue], 0)
+
+Gross Profit LY =
+CALCULATE([Gross Profit], SAMEPERIODLASTYEAR(dim_date[date_key]))
+
+Gross Profit YoY % =
+DIVIDE([Gross Profit] - [Gross Profit LY], [Gross Profit LY], 0)
+
+
+// ── ORDER & VOLUME MEASURES ───────────────────────────────────
+
+Total Orders =
+DISTINCTCOUNT(fact_sales[order_id])
+
+Total Units Sold =
+SUM(fact_sales[quantity])
+
+Avg Order Value =
+DIVIDE([Total Revenue], [Total Orders], 0)
+
+Avg Units per Order =
+DIVIDE([Total Units Sold], [Total Orders], 0)
+
+Avg Discount % =
+AVERAGE(fact_sales[discount_pct])
+
+
+// ── CUSTOMER MEASURES ─────────────────────────────────────────
+
+Active Customers =
+DISTINCTCOUNT(fact_sales[customer_id])
+
+Revenue per Customer =
+DIVIDE([Total Revenue], [Active Customers], 0)
+
+New Customers =
+COUNTROWS(
+    FILTER(
+        VALUES(fact_sales[customer_id]),
+        CALCULATE(MIN(fact_sales[order_date])) >= MIN(dim_date[date_key])
+    )
+)
+
+
+// ── SALESPERSON MEASURES ──────────────────────────────────────
+
+Quota Attainment % =
+DIVIDE(
+    [Total Revenue],
+    SUM(dim_salesperson[annual_quota]),
+    0
+)
+
+Revenue vs Target =
+[Total Revenue] - SUM(dim_salesperson[annual_quota])
+
+Rank by Revenue =
+RANKX(
+    ALL(dim_salesperson[full_name]),
+    [Total Revenue],
+    ,
+    DESC,
+    DENSE
+)
+
+
+// ── PROVINCIAL BREAKDOWN ──────────────────────────────────────
+
+Revenue by Province =
+CALCULATE(
+    [Total Revenue],
+    ALLEXCEPT(dim_region, dim_region[province])
+)
+
+
+// ── RUNNING TOTALS ────────────────────────────────────────────
+
+Cumulative Revenue =
+CALCULATE(
+    [Total Revenue],
+    FILTER(
+        ALL(dim_date[date_key]),
+        dim_date[date_key] <= MAX(dim_date[date_key])
+    )
+)
+
+
+// ── DYNAMIC TITLE ─────────────────────────────────────────────
+
+Report Period Title =
+"Sales Performance (CAD) — " &
+FORMAT(MIN(dim_date[date_key]), "MMM YYYY") &
+" to " &
+FORMAT(MAX(dim_date[date_key]), "MMM YYYY")
+

@@ -1,0 +1,11 @@
+salesperson_id,full_name,team,manager,territory,annual_quota
+1,Liam Tremblay,Ontario Team,Sarah Mitchell,Ontario,6000000
+2,Emma Gagnon,Quebec Team,Jean-Francois Roy,Quebec,5500000
+3,Noah MacLeod,BC Team,Karen Johansson,British Columbia,5800000
+4,Olivia Patel,Ontario Team,Sarah Mitchell,Ontario,5200000
+5,William Nguyen,BC Team,Karen Johansson,British Columbia,4800000
+6,Sophia Kowalski,Prairies Team,Brett Olsen,Alberta,5000000
+7,James Murphy,Quebec Team,Jean-Francois Roy,Quebec,4500000
+8,Isabella Chen,Ontario Team,Sarah Mitchell,Ontario,4200000
+9,Lucas Leblanc,Atlantic Team,Dana Arsenault,Atlantic,5600000
+10,Mia Bjornstad,Prairies Team,Brett Olsen,Manitoba,4900000
